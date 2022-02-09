@@ -19,9 +19,11 @@ async function main() {
   }]})
   console.log("current block number:", await web3.eth.getBlockNumber())
 
-  for(let i=1; i<1000000; i++){
+  for(let i=1000000; i<4000000; i++){
+    console.log("i:", i)
     await web3.eth.deleteBlockByNumber(i)
   }
+  //await web3.debug.chaindbCompact()
 }
 
 
